@@ -2,12 +2,12 @@
 
 # git-flow make-less installer for *nix systems, by Rick Osborne
 # Based on the git-flow core Makefile:
-# http://github.com/petervanderdoes/gitflow-avh/blob/master/Makefile
+# http://github.com/jbinnography/gitflow-avh/blob/master/Makefile
 
 # Licensed under the same restrictions as git-flow:
-# http://github.com/petervanderdoes/gitflow-avh/blob/develop/LICENSE
+# http://github.com/jbinnography/gitflow-avh/blob/develop/LICENSE
 
-# Updated for the fork at petervanderdoes
+# Updated for the fork at jbinnography
 
 usage() {
 	echo "Usage: [environment] gitflow-installer.sh [install|uninstall] [stable|develop]"
@@ -28,7 +28,7 @@ if [ -z "$REPO_NAME" ] ; then
 fi
 
 if [ -z "$REPO_HOME" ] ; then
-	REPO_HOME="https://github.com/petervanderdoes/gitflow-avh.git"
+	REPO_HOME="https://github.com/jbinnography/gitflow-avh.git"
 fi
 
 EXEC_PREFIX="$PREFIX"
