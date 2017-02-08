@@ -482,8 +482,6 @@ gitflow_override_flag_string() {
 # Param $3: string The branch that will be merged.
 #
 gitflow_create_squash_message() {
-	echo Squashed commit of the following:
-	echo
 	echo $1
 	echo
 	git log --no-merges --pretty=medium ^"$2" $3
