@@ -24,53 +24,33 @@ A quick cheatsheet was made by Daniel Kummer:
 
 ## Installing git-flow
 
-See the Wiki for up-to-date [Installation Instructions](https://github.com/jbinnography/gitflow-avh/wiki/Installation).
-
-
-## Integration with your shell
-
-For those who use the [Bash](http://www.gnu.org/software/bash/) or [ZSH](http://www.zsh.org) 
-shell, you can use my [fork of git-flow-completion](https://github.com/jbinnography/git-flow-completion) 
-which includes several additions for git-flow (AVH Edition), or you can use the 
-original [git-flow-completion](http://github.com/bobthecow/git-flow-completion) 
-project by [bobthecow](http://github.com/bobthecow). Both offer tab-completion 
-for git-flow subcommands and branch names with my fork including tab-completion 
-for the commands not found in the original git-flow.
-
+See the Wiki for up-to-date [Installation Instructions](https://github.com/jbinnography/gitflow-inno/wiki/Installation).
 
 ## FAQ
 
-* See the [FAQ](http://github.com/jbinnography/gitflow-avh/wiki/FAQ) section
+* See the [FAQ](http://github.com/jbinnography/gitflow-inno/wiki/FAQ) section
 of the project Wiki.
 * Version Numbering Scheme.  
 Starting with version 1.0, the project uses the following scheme:
 \<MAJOR\>.\<MINOR\>.\<REVISION\>\
-* AVH is the acronym of "A VirtualHome" 
 
 ## Please help out
 
 This project is under constant development. Feedback and suggestions are very
 welcome and I encourage you to use the [Issues
-list](http://github.com/jbinnography/gitflow-avh/issues) on Github to provide that
+list](http://github.com/jbinnography/gitflow-inno/issues) on Github to provide that
 feedback.
 
 Feel free to fork this repository and to commit your additions. For a list of 
 all contributors, please see the [AUTHORS](AUTHORS) file.
-
-Any questions, tips, or general discussion can be posted to the Google group:
-[http://groups.google.com/group/gitflow-users](http://groups.google.com/group/gitflow-users)
-This is the original group set up to support the nvie branch, but I am monitoring
-the list as well for any questions related to my version.
-When you do post a question on the list please indicate which version you are,
-using the complete version number.
 
 ## Contributing
 
 Fork the repository.  Then, run:
 
 ```shell
-git clone -b master git@github.com:<username>/gitflow-avh.git
-cd gitflow-avh
+git clone -b master git@github.com:<username>/gitflow-inno.git
+cd gitflow-inno
 ```
 
 The `-b master` switch has to be added since the fork operation automatically 
@@ -191,15 +171,3 @@ For a wide variety of commands hooks or filters can be called before and after
 the command.  
 The files should be placed in .git/hooks  
 In the directory hooks you can find examples of all the hooks available.
-
-## Showing your appreciation
-
-Of course, the best way to show your appreciation for the git-flow tool itself
-remains contributing to the community.  If you'd like to show your appreciation
-in another way, however, consider donating through PayPal:
-
-[![PayPal][2]][1]
-
-[1]: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=S85FXJ9EBHAF2&lc=US&item_name=gitflow&item_number=gitflow&no_note=0&cn=Add%20special%20instructions%20to%20the%20seller&no_shipping=1&rm=1&return=https%3a%2f%2fgithub%2ecom%2fjbinnography%2fgitflow&cancel_return=https%3a%2f%2fgithub%2ecom%2fjbinnography%2fgitflow&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donate_SM%2egif%3aNonHosted
-
-[2]: https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif
