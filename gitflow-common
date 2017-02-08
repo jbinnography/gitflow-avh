@@ -6,7 +6,7 @@
 #    http://blog.avirtualhome.com/development-workflow-using-git/
 #
 # Feel free to contribute to this project at:
-#    http://github.com/petervanderdoes/gitflow
+#    http://github.com/jbinnography/gitflow
 #
 # Authors:
 # Copyright 2012-2016 Peter van der Does. All rights reserved.
@@ -482,8 +482,6 @@ gitflow_override_flag_string() {
 # Param $3: string The branch that will be merged.
 #
 gitflow_create_squash_message() {
-	echo Squashed commit of the following:
-	echo
 	echo $1
 	echo
 	git log --no-merges --pretty=medium ^"$2" $3
@@ -737,4 +735,8 @@ run_post_hook() {
 
 flags_help() {
 	eval "$( echo "$OPTIONS_SPEC" | git rev-parse --parseopt -- "-h" || echo exit $? )"
+}
+
+gitflow_config_get_remote_origin_url() {
+	echo $(git config --local --get "remote.origin.url")
 }

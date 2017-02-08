@@ -2,12 +2,12 @@
 
 # git-flow make-less installer for *nix systems, by Rick Osborne
 # Based on the git-flow core Makefile:
-# http://github.com/petervanderdoes/gitflow-avh/blob/master/Makefile
+# http://github.com/jbinnography/gitflow-inno/blob/master/Makefile
 
 # Licensed under the same restrictions as git-flow:
-# http://github.com/petervanderdoes/gitflow-avh/blob/develop/LICENSE
+# http://github.com/jbinnography/gitflow-inno/blob/develop/LICENSE
 
-# Updated for the fork at petervanderdoes
+# Updated for the fork at jbinnography
 
 usage() {
 	echo "Usage: [environment] gitflow-installer.sh [install|uninstall] [stable|develop]"
@@ -28,7 +28,7 @@ if [ -z "$REPO_NAME" ] ; then
 fi
 
 if [ -z "$REPO_HOME" ] ; then
-	REPO_HOME="https://github.com/petervanderdoes/gitflow-avh.git"
+	REPO_HOME="https://github.com/jbinnography/gitflow-inno.git"
 fi
 
 EXEC_PREFIX="$PREFIX"
@@ -103,6 +103,19 @@ install)
 	for hook_file in $HOOK_FILES ; do
 		install -v -m 0644 "$hook_file"  "$DOCDIR/hooks"
 	done
+	echo "Setting default global gitflow configuration"
+	git config --global gitflow.feature.start.fetch yes
+	git config --global gitflow.feature.finish.keepremote no
+	git config --global gitflow.feature.finish.squash yes
+	git config --global gitflow.feature.finish.squash-info yes
+	git config --global gitflow.feature.finish.fetch yes
+	git config --global gitflow.feature.finish.push yes
+	git config --global gitflow.hotfix.start.fetch yes
+	git config --global gitflow.hotfix.finish.fetch yes
+	git config --global gitflow.hotfix.finish.push yes
+	git config --global gitflow.release.start.fetch yes
+	git config --global gitflow.release.finish.fetch yes
+	git config --global gitflow.release.finish.push yes
 	exit
 	;;
 *)
@@ -110,3 +123,4 @@ install)
 	exit
 	;;
 esac
+# Setting default global configuration for Innography workflow
