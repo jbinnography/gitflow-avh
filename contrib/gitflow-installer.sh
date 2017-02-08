@@ -103,6 +103,19 @@ install)
 	for hook_file in $HOOK_FILES ; do
 		install -v -m 0644 "$hook_file"  "$DOCDIR/hooks"
 	done
+	echo "Setting default global gitflow configuration"
+	git config --global gitflow.feature.start.fetch yes
+	git config --global gitflow.feature.finish.keepremote no
+	git config --global gitflow.feature.finish.squash yes
+	git config --global gitflow.feature.finish.squash-info yes
+	git config --global gitflow.feature.finish.fetch yes
+	git config --global gitflow.feature.finish.push yes
+	git config --global gitflow.hotfix.start.fetch yes
+	git config --global gitflow.hotfix.finish.fetch yes
+	git config --global gitflow.hotfix.finish.push yes
+	git config --global gitflow.release.start.fetch yes
+	git config --global gitflow.release.finish.fetch yes
+	git config --global gitflow.release.finish.push yes
 	exit
 	;;
 *)
@@ -111,16 +124,3 @@ install)
 	;;
 esac
 # Setting default global configuration for Innography workflow
-echo "Setting default global gitflow configuration"
-git config --global gitflow.feature.start.fetch yes
-git config --global gitflow.feature.finish.keepremote no
-git config --global gitflow.feature.finish.squash yes
-git config --global gitflow.feature.finish.squash-info yes
-git config --global gitflow.feature.finish.fetch yes
-git config --global gitflow.feature.finish.push yes
-git config --global gitflow.hotfix.start.fetch yes
-git config --global gitflow.hotfix.finish.fetch yes
-git config --global gitflow.hotfix.finish.push yes
-git config --global gitflow.release.start.fetch yes
-git config --global gitflow.release.finish.fetch yes
-git config --global gitflow.release.finish.push yes
