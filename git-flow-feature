@@ -536,6 +536,7 @@ showcommands!    Show git commands while executing them
 	echo "Summary of actions:"
 	echo "- The remote branch '$BRANCH' was created or updated"
 	echo "- The local branch '$BRANCH' was configured to track the remote branch"
+	echo "- The compare link is https://github.com/Innography/app/compare/$BASE_BRANCH...$BRANCH"
 	echo "- You are now on branch '$(git_current_branch)'"
 	echo
 }
