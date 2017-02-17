@@ -533,7 +533,7 @@ showcommands!    Show git commands while executing them
 	run_post_hook "$NAME" "$ORIGIN" "$BRANCH"
 	BASE_BRANCH=$(gitflow_config_get_base_branch $BRANCH)
 	BASE_URL=$(gitflow_config_get_remote_origin_url)
-	BASE_URL="${BASE_URL/git@github.com:/https://github.com\/}"
+	BASE_URL="${BASE_URL/git@github.com:/https://github.com/}"
 
 	echo
 	echo "Summary of actions:"
