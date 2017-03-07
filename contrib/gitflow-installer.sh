@@ -116,6 +116,7 @@ install)
 	git config --global gitflow.release.start.fetch yes
 	git config --global gitflow.release.finish.fetch yes
 	git config --global gitflow.release.finish.push yes
+	rm -r gitflow
 	exit
 	;;
 *)
