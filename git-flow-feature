@@ -532,15 +532,11 @@ showcommands!    Show git commands while executing them
 	git_do checkout "$BRANCH" || die "Could not check out branch '$BRANCH'."
 
 	run_post_hook "$NAME" "$ORIGIN" "$BRANCH"
-	BASE_BRANCH=$(gitflow_config_get_base_branch $BRANCH)
-	BASE_URL=$(gitflow_config_get_remote_origin_url)
-	BASE_URL="${BASE_URL/git@github.com:/https://github.com/}"
 
 	echo
 	echo "Summary of actions:"
 	echo "- The remote branch '$BRANCH' was created or updated"
 	echo "- The local branch '$BRANCH' was configured to track the remote branch"
-	echo "- The compare link is ${BASE_URL%.git}/compare/$BASE_BRANCH...$BRANCH"
 	echo "- You are now on branch '$(git_current_branch)'"
 	echo
 }
