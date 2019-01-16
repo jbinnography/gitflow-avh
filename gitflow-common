@@ -294,7 +294,7 @@ gitflow_is_initialized() {
 	gitflow_has_master_configured                    && \
 	gitflow_has_develop_configured                   && \
 	[ "$(git config --get gitflow.branch.master)" != "$(git config --get gitflow.branch.develop)" ] && \
-	$(git config --get-regexp gitflow.prefix >/dev/null 2>&1)
+	git config --get-regexp gitflow.prefix >/dev/null 2>&1
 }
 
 # Loading settings that can be overridden using git config
@@ -805,8 +805,4 @@ run_post_hook() {
 
 flags_help() {
 	eval "$( echo "$OPTIONS_SPEC" | git rev-parse --parseopt -- "-h" || echo exit $? )"
-}
-
-gitflow_config_get_remote_origin_url() {
-	echo $(git config --local --get "remote.origin.url")
 }

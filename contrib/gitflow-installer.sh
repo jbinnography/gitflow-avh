@@ -10,7 +10,7 @@
 # Updated for the fork at jbinnography
 
 usage() {
-	echo "Usage: [environment] gitflow-installer.sh [install|uninstall] [stable|develop]"
+	echo "Usage: [environment] gitflow-installer.sh [install|uninstall] [stable|develop|version] [tag]"
 	echo "Environment:"
 	echo "   PREFIX=$PREFIX"
 	echo "   REPO_HOME=$REPO_HOME"
@@ -87,6 +87,11 @@ install)
 		git checkout develop
 		cd "$OLDPWD"
 		;;
+	version)
+		cd "$REPO_NAME"
+		git checkout tags/$3
+		cd "$OLDPWD"
+		;;		
 	*)
 		usage
 		exit
@@ -116,6 +121,7 @@ install)
 	git config --global gitflow.release.start.fetch yes
 	git config --global gitflow.release.finish.fetch yes
 	git config --global gitflow.release.finish.push yes
+	rm -r gitflow
 	exit
 	;;
 *)
